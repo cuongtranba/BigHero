@@ -53,6 +53,7 @@ namespace BigHero.Controllers
         {
             if (ModelState.IsValid)
             {
+                item.UserId = db.UserProfiles.FirstOrDefault(x => x.UserName == User.Identity.Name).UserId;
                 db.Items.Add(item);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -85,6 +86,7 @@ namespace BigHero.Controllers
         {
             if (ModelState.IsValid)
             {
+                item.UserId = db.UserProfiles.FirstOrDefault(x => x.UserName == User.Identity.Name).UserId;
                 db.Entry(item).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
