@@ -12,6 +12,6 @@ namespace BigHero.Models
         public DateTime EndDate { get; set; }
         public string Note { get; set; }
         public string Location { get; set; }
-        public string S { get; set; }
+        public string Email { get; set; }
     }
 }
