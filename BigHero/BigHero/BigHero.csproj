@@ -176,9 +176,9 @@
     <Compile Include="Migrations\201508080244165_Alter_UserTable.Designer.cs">
       <DependentUpon>201508080244165_Alter_UserTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201508080414338_add new address for user.cs" />
-    <Compile Include="Migrations\201508080414338_add new address for user.Designer.cs">
-      <DependentUpon>201508080414338_add new address for user.cs</DependentUpon>
+    <Compile Include="Migrations\201508080417298_1.cs" />
+    <Compile Include="Migrations\201508080417298_1.Designer.cs">
+      <DependentUpon>201508080417298_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -382,8 +382,8 @@
     <EmbeddedResource Include="Migrations\201508080244165_Alter_UserTable.resx">
       <DependentUpon>201508080244165_Alter_UserTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201508080414338_add new address for user.resx">
-      <DependentUpon>201508080414338_add new address for user.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201508080417298_1.resx">
+      <DependentUpon>201508080417298_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
