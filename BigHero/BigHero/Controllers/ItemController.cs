@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BigHero.Models;
+using BigHero.Utilities;
 
 namespace BigHero.Controllers
 {
@@ -53,8 +54,11 @@ namespace BigHero.Controllers
         {
             if (ModelState.IsValid)
             {
-                item.UserId = db.UserProfiles.FirstOrDefault(x => x.UserName == User.Identity.Name).UserId;
+                var firstOrDefault = db.UserProfiles.FirstOrDefault(x => x.UserName == User.Identity.Name);
+                if (firstOrDefault != null)
+                    item.UserId = firstOrDefault.UserId;
                 db.Items.Add(item);
+                SendMail.Send(item, firstOrDefault);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
