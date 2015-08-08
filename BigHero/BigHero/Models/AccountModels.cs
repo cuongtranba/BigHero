@@ -11,11 +11,20 @@ namespace BigHero.Models
     public class UsersContext : DbContext
     {
         public UsersContext()
-            : base("DefaultConnection")
+            : base("name=Noteconnection")
         {
         }
 
+        public DbSet<Item> Items { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Item>()
+                        .HasRequired(x => x.UserProfile)
+                        .WithMany(x => x.Items)
+                        .HasForeignKey(x => x.UserId);
+        }
     }
 
     [Table("UserProfile")]
@@ -25,6 +34,8 @@ namespace BigHero.Models
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
         public string UserName { get; set; }
+
+        public virtual IList<Item> Items  { get; set; }
     }
 
     public class RegisterExternalLoginModel

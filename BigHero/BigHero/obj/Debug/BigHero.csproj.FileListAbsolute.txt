@@ -47,3 +47,6 @@ C:\Users\Cuongtr\Documents\GitHub\BigHero\BigHero\BigHero\bin\DotNetOpenAuth.Ope
 C:\Users\Cuongtr\Documents\GitHub\BigHero\BigHero\BigHero\obj\Debug\BigHero.csprojResolveAssemblyReference.cache
 C:\Users\Cuongtr\Documents\GitHub\BigHero\BigHero\BigHero\obj\Debug\BigHero.dll
 C:\Users\Cuongtr\Documents\GitHub\BigHero\BigHero\BigHero\obj\Debug\BigHero.pdb
+C:\Users\Cuongtr\Documents\GitHub\BigHero\BigHero\BigHero\obj\Debug\BigHero.Migrations.InitDb.resources
+C:\Users\Cuongtr\Documents\GitHub\BigHero\BigHero\BigHero\obj\Debug\BigHero.csproj.GenerateResource.Cache
+C:\Users\Cuongtr\Documents\GitHub\BigHero\BigHero\BigHero\obj\Debug\BigHero.Migrations.Alter_UserTable.resources
